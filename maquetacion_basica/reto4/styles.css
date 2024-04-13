@@ -1,0 +1,134 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+}
+
+header {
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 40px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+/* PAGINA HOME */
+
+.divhome {
+    /* border: 3px solid orange; */
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.articlehome {
+    /* border: 5px solid green; */
+    height: 70vh;
+    width: 80vw;
+    display: flex;
+    gap: 40px;
+}
+
+.sectionhome {
+    /* border: 3px solid red; */
+    display: flex;
+    flex-direction: column;
+}
+
+.h1home {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.parrafohome {
+    /* border: 3px solid yellow; */
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    gap: 10px;
+}
+
+/* PAGINA GALERIA */
+
+.divgaleria {
+    /* border: 5px solid blue; */
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.divgaleria1 {
+    /* border: 5px solid red; */
+    display: flex;
+    height: 50%;
+    width: 33.33%;
+}
+
+.divgaleria2 {
+    /* border: 5px solid yellow; */
+    display: flex;
+    height: 50%;
+    width: 33.33%;
+}
+
+.imggaleria {
+    width: 100%;
+}
+
+/* PAGINA BLOG */
+
+.h1blog {
+        /* border: 3px solid green; */
+    display: flex;
+    justify-content: center;
+    font-size: 35px;
+}
+
+.divblog {
+    /* border: 3px solid orange; */
+    height: 93vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.articleblog {
+    /* border: 5px solid green; */
+    height: 65vh;
+    width: 90vw;
+    display: flex;
+    gap: 10px;
+}
+
+.sectionblog {
+    /* border: 3px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+    overflow: auto;
+}
+
+.parrafoblog {
+    /* border: 3px solid yellow; */
+    display: flex;
+    flex-direction: column;
+}
