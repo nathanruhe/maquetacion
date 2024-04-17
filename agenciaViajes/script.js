@@ -65,13 +65,20 @@ button2.addEventListener("click", () => filtrar());
 
 
 // punto 5
+const datos = document.createElement("div");
+datos.style.cssText = "border: 2px solid black; background: white; margin: auto; padding: 20px;"
+
 function filtrar () {
+    const central = document.querySelector(".central");
+    let datos2 = ""
+
     for (let element of arrayPersonas) {
         let result = element.destino.toLowerCase();
         if (result == "mallorca" | result == "canarias" | result == "galicia") {
-            const datos = document.createElement("div");
-            datos.innerHTML = `<p>Nombre: ${element.nombre}</p><p>Nombre: ${element.origen}</p><p>Nombre: ${element.destino}</p><p>Nombre: ${element.totalPersonas}</p><p>Nombre: ${element.fecha}</p>`
-            console.log(datos);
+
+            datos2 += `<p>Nombre: ${element.nombre}</p><p>Origen: ${element.origen}</p><p>Destino: ${element.destino}</p><p>Total personas: ${element.totalPersonas}</p><p>Fecha: ${element.fecha}</p><br>` 
         }; 
     };
+    datos.innerHTML = datos2
+    central.appendChild(datos);
 };
