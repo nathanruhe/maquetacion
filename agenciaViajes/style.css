@@ -58,7 +58,7 @@ header {
 
     .descripcion {
         border: 1px solid black;
-        background-image: url("assets/fondo.jpg");
+        background-image: url("assets/avion.png");
         background-size: cover;
         opacity: 0.8;
         padding: 50px;

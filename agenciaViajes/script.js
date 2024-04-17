@@ -65,15 +65,13 @@ button2.addEventListener("click", () => filtrar());
 
 
 // punto 5
-let arrayDestino = [];
-
 function filtrar () {
     for (let element of arrayPersonas) {
         let result = element.destino.toLowerCase();
         if (result == "mallorca" | result == "canarias" | result == "galicia") {
-            let string = JSON.stringify(element);
-            arrayDestino.push(string)
+            const datos = document.createElement("div");
+            datos.innerHTML = `<p>Nombre: ${element.nombre}</p><p>Nombre: ${element.origen}</p><p>Nombre: ${element.destino}</p><p>Nombre: ${element.totalPersonas}</p><p>Nombre: ${element.fecha}</p>`
+            console.log(datos);
         }; 
     };
-    alert(arrayDestino)
 };
