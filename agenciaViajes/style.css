@@ -1,0 +1,192 @@
+* {
+    box-sizing: 0;
+    padding: 0;
+    margin: 0;
+    font-size: 25px;
+}
+
+main {
+    /* border: 5px solid red; */
+    width: 100%;
+    height: 100%;
+}
+
+h2 {
+    text-align: center;
+    font-size: 40px;
+}
+
+/* --------------- header --------------- */
+
+header {
+    /* border: 5px solid blue; */
+    background-color: black;
+    color: white;
+    height: 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: bold;
+}
+
+    .pheader {
+        font-size: 40px;
+    }
+
+    .divheader {
+        display: flex;
+        gap: 40px;
+    }
+
+    .divheader p {
+        display: flex;
+        gap: 40px;
+        font-size: 25px;
+    }
+
+/* --------------- central --------------- */
+
+.central {
+    /* border: 5px solid green; */
+    background-color: rgb(252, 214, 168);
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+    .descripcion {
+        border: 1px solid black;
+        background-image: url("assets/avion.png");
+        background-size: cover;
+        opacity: 0.8;
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-left: 150px;
+        margin-right: 150px;
+    }
+
+        .descripcion p {
+            font-weight: bold;
+        }
+
+    .lugares {
+        border: 1px solid black;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+        .lugares2 {
+            /* border: 5px solid red; */
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+        }
+
+            .lugares2 div {
+                /* border: 5px solid red; */
+                display: flex;
+                flex-direction: column;
+                width: 400px;
+                gap: 10px;
+            }
+
+                .lugares2 div img {
+                    width: 100%;
+                }
+
+                .lugares2 div p {
+                    /* border: 5px solid blue; */
+                    text-align: center;
+                    padding: 5px;
+                }
+
+    .ofertas {
+        border: 1px solid black;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 50px;
+        margin-left: 220px;
+        margin-right: 220px;
+    }
+
+        .ofertas h2 {
+            text-align: center;
+        }
+
+    form {
+        border: 1px solid black;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 50px;
+    }
+
+        form h2 {
+            text-align: center;
+        }
+
+        .divform {
+            display: flex;
+            justify-content: space-evenly;
+            gap: 60px;
+        }
+
+            .divform input{
+                width: 100%;
+            }
+
+
+        .divbtn {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+        }
+
+        form input::placeholder {
+            color: black;
+            text-align: center;
+        }
+
+/* --------------- footer --------------- */
+
+footer {
+    /* border: 5px solid orchid; */
+    background-color: black;
+    color: white;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+}
+
+    .footer1 {
+        /* border: 5px solid orange; */
+        height: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+        .footer1 div {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+    .footer2 {
+        /* border: 5px solid lightskyblue; */
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
