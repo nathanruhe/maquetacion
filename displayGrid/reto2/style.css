@@ -1,0 +1,83 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+.container {
+    /* border: 10px solid yellow; */
+    font-size: 30px;
+    text-align: center;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: [x0] 1fr [x1] 1fr [x2];
+    grid-template-rows:[y0] 1fr [y1];
+}
+
+    .hijo1 {
+        grid-column: x0 / x1;
+        grid-row: y0 / y1;
+
+        /* border: 10px solid blue; */
+        font-size: 30px;
+        text-align: center;
+        display: grid;
+        grid-template-columns: [x0] 2fr [x1] 1fr [x2] 2fr [x3];
+        grid-template-rows:[y0] 2fr [y1] 1fr [y2];
+    }
+
+    .hijo2 {
+        grid-column: x1 / x2;
+        grid-row: y0 / y1;
+
+        /* border: 10px solid red; */
+        font-size: 30px;
+        text-align: center;
+        display: grid;
+        grid-template-columns: [x0] 2fr [x1] 1fr [x2] 2fr [x3];
+        grid-template-rows:[y0] 2fr [y1] 1fr [y2];
+    }
+
+.A {
+    background-color: chartreuse;
+    color: black;
+    grid-column: x0 / x1;
+    grid-row: y0 / y1;
+}
+
+.B {
+    background-color: black;
+    color: white;
+    grid-column: x1 / x2;
+    grid-row: y0 / y1;
+
+}
+
+.C {
+    background-color: chartreuse;
+    color: black;
+    grid-column: x2 / x3;
+    grid-row: y0 / y1;
+}
+
+.D {
+    background-color: black;
+    color: white;
+    grid-column: x0 / x1;
+    grid-row: y1 / y2;
+}
+
+.E {
+    background-color: chartreuse;
+    color: black;
+    grid-column: x1 / x2;
+    grid-row: y1 / y2;
+}
+
+.F {
+    background-color: black;
+    color: white;
+    grid-column: x2 / x3;
+    grid-row: y1 / y2;
+}

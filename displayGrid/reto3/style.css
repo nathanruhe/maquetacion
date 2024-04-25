@@ -1,0 +1,128 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+.container {
+    color: white;
+    /* border: 10px solid yellow; */
+    font-size: 30px;
+    text-align: center;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: [x0] 2fr [x1] 1fr [x2] 1fr [x3];
+    grid-template-rows:[y0] 1fr [y1] 2fr [y2] 4fr [y3] 1fr [y4];
+}
+
+.header {
+    background-color: black;
+    grid-column: x0 / x3;
+    grid-row: y0 / y1;
+
+    display: grid;
+    align-items: center;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.hijo1 {
+    background-color: blue;
+    text-align: start;
+    padding: 30px;
+    gap: 15px;
+    grid-column: x0 / x2;
+    grid-row: y1 / y3;
+
+    display: grid;
+    grid-template-columns: [x0] 2fr [x1] 1fr [x2];
+    grid-template-rows: [y0] 1fr [y1] 2fr [y2];
+}
+
+    .contenido {
+        border: 5px solid white;
+        padding: 10px;
+        font-weight: bold;
+        font-size: 40px;
+        grid-column: x0 / x2;
+        grid-row: y0 / y1;
+    }
+
+    .texto1 {
+        border: 5px solid white;
+        padding: 10px;
+        grid-column: x0 / x1;
+        grid-row: y1 / y2;
+    }
+
+    .texto2 {
+        border: 5px solid white;
+        padding: 10px;
+        grid-column: x1 / x2;
+        grid-row: y1 / y2;
+    }
+
+.hijo2 {
+    background-color: #00d29f;
+    grid-column: x2 / x3;
+    grid-row: y1 / y3;
+    padding: 15px;
+    gap: 15px;
+
+    display: grid;
+    grid-template-rows: [y0] 1fr [y1] 1fr [y2] 1fr [y3] 1fr [y4];
+}
+
+.menu {
+    border: 5px solid black;
+    font-weight: bold;
+    font-size: 40px;
+    display: grid;
+    align-items: center;
+    padding: 10px;
+    grid-row: y0 / y1;
+}
+
+.menu1 {
+    background: black;
+    padding: 10px;
+    grid-row: y1 / y2;
+}
+
+.menu2 {
+    background: black;
+    padding: 10px;
+    grid-row: y2 / y3;
+}
+
+.menu3 {
+    background: black;
+    padding: 10px;
+    grid-row: y3 / y4;
+}
+
+.hijo3 {
+    background-color: #621dc0;
+    grid-column: x0 / x3;
+    grid-row: y3 / y4;
+    padding: 10px;
+    gap: 10px;
+
+    display: grid;
+    grid-template-columns: [x0] 1fr [x1] 1fr [x2];
+}
+
+.footer {
+    border: 5px solid black;
+    grid-column: x0 / x1;
+    display: grid;
+    align-items: center;
+}
+
+.contacto {
+    border: 5px solid black;
+    grid-column: x1 / x2;
+    display: grid;
+    align-items: center;
+}
