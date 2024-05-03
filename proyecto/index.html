@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto modulo 2</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <a href="">IMDB PELICULAS</a>
+        <div>
+            <button class="btn" id="enlacePeliculas">Películas</button>
+            <button class="btn" id="enlaceProfesionales">Profesionales</button>
+        </div>
+    </header>
+
+    <main>
+        <section id="sectionPrincipal">
+            <h1>Bienvenido a nuestra sección de cine</h1>
+            <div>
+                <img class="imgPrin" src="https://www.saintgregory.cr/wp-content/uploads/2023/06/1609408585_467254_1609408795_noticia_normal.jpg" alt="">
+            </div>
+        </section>
+
+        <section id="sectionPeliculas">
+            <h2>Películas</h2>
+            <div id="listaPeliculas"></div>
+            <div>
+                <form>
+                    <h3>Agregar Nueva Película</h3>
+                    <input id="titulo" type="text" placeholder="Título">
+                    <input id="anyo" type="text" placeholder="Año de estreno">
+                    <input id="nacion" type="text" placeholder="Nacionalidad">
+                    <input id="genero" type="text" placeholder="Género">
+                    <input id="actor" type="text" placeholder="Actor/es: separados por coma">
+                    <input id="director" type="text" placeholder="Director">
+                    <input id="escritor" type="text" placeholder="Escritor">
+                    <input id="lengua" type="text" placeholder="Lenguaje">
+                    <input id="plataforma" type="text" placeholder="Plataforma">
+                    <input id="prota" type="text" placeholder="Protagonista">
+                    <input id="produc" type="text" placeholder="Productor">
+                    <input id="distri" type="text" placeholder="Distribuidor">
+                    <input id="direc" type="text" placeholder="Dirección url portada">
+                    <button type="button" class="btn2">Agregar película</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="sectionProfesionales">
+            <h2>Profesionales</h2>
+            <div id="listaProfesionales"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&#169; Nathanruhe 2024 <b class="bold">|</b> All rights reserved</p>
+    </footer>
+    
+    <script src="movie.js"></script>
+    <script src="professional.js"></script>
+
+</body>
+</html>
