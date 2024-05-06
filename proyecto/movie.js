@@ -40,43 +40,48 @@ function movie () {
 
     const movie = document.querySelector("#sectionPeliculas");
     movie.style.cssText = "display: block"
+
+    mostrarPelis(arrayMovie);
 }
 
-arrayMovie.forEach(peliculas => {
-    const divPadreMovie = document.createElement("div");
-    divPadreMovie.style.cssText = "border-radius: 10px; background: rgb(2, 2, 126); padding: 10px; display: flex;"
 
-    const divFotoMovie = document.createElement("div");
-    divFotoMovie.style.cssText = "background: white; width: 400px;"
-
-    const divTextoMovie = document.createElement("div");
-    divTextoMovie.style.cssText = "background: white; padding: 20px; width: 400px; display: flex; flex-direction: column; justify-content: center; align-items: center;"
-
+const mostrarPelis = (arrayMovie) => {
     const listaMovie = document.querySelector("#listaPeliculas");
-
-    let datos1 = `<img src="${peliculas.photo}" alt="foto"></img>`
-    let datos2 = ""
-
-    if (peliculas.actors.length == 1) {
-        datos2 += `<p>Titulo: ${peliculas.title}</p><p>Año estreno: ${peliculas.releaseYear}</p><p>Nacionalidad: ${peliculas.nationality}</p><p>Género: ${peliculas.genre}</p><p>Actor: ${peliculas.actors}</p><p>Director: ${peliculas.director}</p><p>Escritor: ${peliculas.writer}</p><p>Lenguaje: ${peliculas.language}</p></p><p>Plataforma: ${peliculas.platform}</p></p><p>Protagonista: ${peliculas.mainCharacterName}</p></p><p>Productor: ${peliculas.producer}</p></p><p>Distribuidor: ${peliculas.distributor}</p>`
-    } else {
-        datos2 += `<p>Titulo: ${peliculas.title}</p><p>Año estreno: ${peliculas.releaseYear}</p><p>Nacionalidad: ${peliculas.nationality}</p><p>Género: ${peliculas.genre}</p><p>Actores: ${peliculas.actors.map(actor => `<br>${actor}`).join('')}</p><p>Director: ${peliculas.director}</p><p>Escritor: ${peliculas.writer}</p><p>Lenguaje: ${peliculas.language}</p></p><p>Plataforma: ${peliculas.platform}</p></p><p>Protagonista: ${peliculas.mainCharacterName}</p></p><p>Productor: ${peliculas.producer}</p></p><p>Distribuidor: ${peliculas.distributor}</p>`
-    }
-
-    divFotoMovie.innerHTML = datos1
-    divTextoMovie.innerHTML = datos2
-
-    listaMovie.appendChild(divPadreMovie)
-    divPadreMovie.appendChild(divFotoMovie)
-    divPadreMovie.appendChild(divTextoMovie)
-});
+    listaMovie.innerHTML = '';
+    
+    arrayMovie.forEach(peliculas => {
+        const divPadreMovie = document.createElement("div");
+        divPadreMovie.style.cssText = "border-radius: 10px; background: rgb(2, 2, 126); padding: 10px; display: flex;"
+    
+        const divFotoMovie = document.createElement("div");
+        divFotoMovie.style.cssText = "background: white; width: 400px;"
+    
+        const divTextoMovie = document.createElement("div");
+        divTextoMovie.style.cssText = "background: white; padding: 20px; width: 400px; display: flex; flex-direction: column; justify-content: center; align-items: center;"
+    
+        let datos1 = `<img src="${peliculas.photo}" alt="foto"></img>`
+        let datos2 = ""
+    
+        if (peliculas.actors.length == 1) {
+            datos2 += `<p>Titulo: ${peliculas.title}</p><p>Año estreno: ${peliculas.releaseYear}</p><p>Nacionalidad: ${peliculas.nationality}</p><p>Género: ${peliculas.genre}</p><p>Actor: ${peliculas.actors}</p><p>Director: ${peliculas.director}</p><p>Escritor: ${peliculas.writer}</p><p>Lenguaje: ${peliculas.language}</p></p><p>Plataforma: ${peliculas.platform}</p></p><p>Protagonista: ${peliculas.mainCharacterName}</p></p><p>Productor: ${peliculas.producer}</p></p><p>Distribuidor: ${peliculas.distributor}</p>`
+        } else {
+            datos2 += `<p>Titulo: ${peliculas.title}</p><p>Año estreno: ${peliculas.releaseYear}</p><p>Nacionalidad: ${peliculas.nationality}</p><p>Género: ${peliculas.genre}</p><p>Actores: ${peliculas.actors.map(actor => `<br>${actor}`).join('')}</p><p>Director: ${peliculas.director}</p><p>Escritor: ${peliculas.writer}</p><p>Lenguaje: ${peliculas.language}</p></p><p>Plataforma: ${peliculas.platform}</p></p><p>Protagonista: ${peliculas.mainCharacterName}</p></p><p>Productor: ${peliculas.producer}</p></p><p>Distribuidor: ${peliculas.distributor}</p>`
+        }
+    
+        divFotoMovie.innerHTML = datos1
+        divTextoMovie.innerHTML = datos2
+    
+        listaMovie.appendChild(divPadreMovie)
+        divPadreMovie.appendChild(divFotoMovie)
+        divPadreMovie.appendChild(divTextoMovie)
+    });
+}
 
 
 
 // CODIGO FORMULARIO
 const botonForm = document.querySelector(".btn2")
 botonForm.addEventListener("click", () => form());
-
 
 function form () {
     const titulo = document.querySelector("#titulo").value;
@@ -93,9 +98,11 @@ function form () {
     const distri = document.querySelector("#distri").value;
     const direc = document.querySelector("#direc").value;
 
-    const nuevaPelicula = new Movie(titulo, anyo, nacion, genero, [actor], director, escritor, lengua, plataforma, prota, produc, distri, direc);
+    const nuevaPelicula = new Movie(titulo, anyo, nacion, genero, actor, director, escritor, lengua, plataforma, prota, produc, distri, direc);
 
     arrayMovie.push(nuevaPelicula);
+
+    mostrarPelis(arrayMovie);
 
     console.log(arrayMovie);
 };
